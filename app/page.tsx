@@ -25,7 +25,7 @@ export default function Home() {
 
   const fetchCategories = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/categories");
+      const res = await fetch("https://backend-marketplace-85du.onrender.com/api/categories");
       const data = await res.json();
       setCategories(data);
     } catch {}
@@ -35,8 +35,8 @@ export default function Home() {
     setLoading(true);
     try {
       const url = selectedCategory
-        ? `http://localhost:3001/api/products?categoryId=${selectedCategory}`
-        : "http://localhost:3001/api/products";
+        ? `https://backend-marketplace-85du.onrender.com/api/products?categoryId=${selectedCategory}`
+        : "https://backend-marketplace-85du.onrender.com/api/products";
       const res = await fetch(url);
       const data = await res.json();
       setProducts(data);

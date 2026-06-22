@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Product } from "../types/product";
 import Cookies from "js-cookie";
 
-const API = "http://localhost:3001/api/products";
+const API = "https://backend-marketplace-85du.onrender.com/api/products";
 
 export default function AdminPage() {
   const [products, setProducts] = useState<Product[]>([]);

@@ -3,7 +3,7 @@ import { Product } from "../../types/product";
 
 async function getProduct(id: string): Promise<Product | null> {
   try {
-    const res = await fetch(`http://localhost:3001/api/products/${id}`, {
+    const res = await fetch(`https://backend-marketplace-85du.onrender.com/api/products/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) return null;
