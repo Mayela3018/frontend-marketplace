@@ -211,7 +211,7 @@ export default function AdminPage() {
                     borderRadius: "10px",
                     color: "var(--text)",
                   }}
-                  formatter={(value: number) => [`S/. ${value.toFixed(2)}`, "Precio"]}
+                 formatter={(value: any) => [`S/. ${Number(value ?? 0).toFixed(2)}`, "Precio"]}
                 />
                 <Bar dataKey="precio" radius={[8, 8, 0, 0]}>
                   {products.slice(0, 8).map((_, index) => (
